@@ -1,257 +1,257 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
   <title>Adoptuj psa!</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
-  <script src="jquery-3.3.1.js" charset="utf-8"></script>
-  <script src="bootstrap-4.3.1-dist/js/bootstrap.min.js" charset="utf-8"></script>
-  <script type="text/javascript">
-   function pushButton() {
-     console.log("Button pushed - get puppy");
-
-     let xhttp = new XMLHttpRequest();
-     xhttp.onreadystatechange = function() {
-       if (this.readyState === 4 && this.status === 200) {
-         console.log("Dobrze" + this);
-         console.log(JSON.parse(this.responseText));
-         let puppy = JSON.parse(this.responseText);
-         console.log(puppy["message"]);
-         document.getElementById("img1").src = puppy["message"];
-       }
-     }
-     xhttp.open("GET", "https://dog.ceo/api/breeds/image/random", true);
-     xhttp.send();
-   }
-
- </script>
-  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
-  </head>
-    <body onload ="pushButton()">
-    <header>
-      <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-          <a class="navbar-brand" href="#">
-            <img src="images/logo-small.png" class="logo" alt="logo">
-          </a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <h1>Psia adopcja</h1>
-<form>
-<input type="text" id="szukaj"> <input type="submit" value="Szukaj" id="wyslij">
-</form>
-<i class="fab fa-facebook"></i>
-<i class="fab fa-twitter-square"></i>
-<i class="fas fa-envelope-square"></i>
-<i class="fas fa-phone-square-alt"></i>
-</div>
-<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-  <li class="nav-item">
-    <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">O nas</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Formularz do adopcji</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Kontakt</a>
-  </li>
-</ul>
-<div class="tab-content" id="pills-tabContent">
-  <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam eveniet, culpa obcaecati optio odit voluptates dolores voluptas odio perspiciatis ut porro beatae quae! Hic, aliquam, velit! Inventore, qui modi. Magni!</div>
-  <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab"><form>
-  <div class="form-row">
-    <div class="form-group col-md-6">
-      <label for="inputEmail4">Email</label>
-      <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
-    </div>
-    <div class="form-group col-md-6">
-      <label for="inputPassword4">Imię i nazwisko</label>
-      <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
-    </div>
-  </div>
-  <div class="form-group">
-    <label for="inputAddress">Addres</label>
-    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-  </div>
-  <div class="form-group">
-    <label for="inputAddress2">Warunki mieszkaniowe</label>
-    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
-  </div>
-  <div class="form-row">
-    <div class="form-group col-md-6">
-      <label for="inputWhy">Czemu adopcja</label>
-      <input type="text" class="form-control" id="inputWhy">
-    </div>
-    <div class="form-group col-md-4">
-      <label for="inputState">Czy sa inne zwierzęta</label>
-      <select id="inputState" class="form-control">
-        <option selected>tak</option>
-        <option>nie</option>
-      </select>
-  </div>
-  <button type="submit" class="btn btn-primary">Wyślij</button>
-</form></div>
-  <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis explicabo distinctio et voluptatum quis recusandae labore, eius optio esse non necessitatibus corporis itaque maiores ipsa, repudiandae ratione in aliquid dolore?</div>
-</div>
+    <link rel="stylesheet" href="style.css">
+</head>
 
-    </header>
-    <main>
-      <div class="spinner-border text-primary" role="status">
-  <span class="sr-only">Loading...</span>
-</div>
-<div class="spinner-border text-secondary" role="status">
-  <span class="sr-only">Loading...</span>
-</div>
-<div class="spinner-border text-success" role="status">
-  <span class="sr-only">Loading...</span>
-</div>
-<div class="spinner-border text-danger" role="status">
-  <span class="sr-only">Loading...</span>
-</div>
-<div class="spinner-border text-warning" role="status">
-  <span class="sr-only">Loading...</span>
-</div>
-<div class="spinner-border text-info" role="status">
-  <span class="sr-only">Loading...</span>
-</div>
-<div class="spinner-border text-light" role="status">
-  <span class="sr-only">Loading...</span>
-</div>
-<div class="spinner-border text-dark" role="status">
-  <span class="sr-only">Loading...</span>
-  <span class="sr-only">Loading...</span>
-</div>
-<div class="spinner-border text-secondary" role="status">
-  <span class="sr-only">Loading...</span>
-</div>
-<div class="spinner-border text-success" role="status">
-  <span class="sr-only">Loading...</span>
-</div>
-<div class="spinner-border text-danger" role="status">
-  <span class="sr-only">Loading...</span>
-</div>
-<div class="spinner-border text-warning" role="status">
-  <span class="sr-only">Loading...</span>
-</div>
-<div class="spinner-border text-info" role="status">
-  <span class="sr-only">Loading...</span>
-</div>
-<div class="spinner-border text-light" role="status">
-  <span class="sr-only">Loading...</span>
-</div>
-<div class="spinner-border text-dark" role="status">
-  <span class="sr-only">Loading...</span>
-  <span class="sr-only">Loading...</span>
-</div>
-<div class="spinner-border text-secondary" role="status">
-  <span class="sr-only">Loading...</span>
-</div>
-<div class="spinner-border text-success" role="status">
-  <span class="sr-only">Loading...</span>
-</div>
-<div class="spinner-border text-danger" role="status">
-  <span class="sr-only">Loading...</span>
-</div>
-<div class="spinner-border text-warning" role="status">
-  <span class="sr-only">Loading...</span>
-</div>
-<div class="spinner-border text-info" role="status">
-  <span class="sr-only">Loading...</span>
-</div>
-<div class="spinner-border text-light" role="status">
-  <span class="sr-only">Loading...</span>
-</div>
-<div class="spinner-border text-dark" role="status">
-  <span class="sr-only">Loading...</span>
-  <span class="sr-only">Loading...</span>
-</div>
-<div class="spinner-border text-secondary" role="status">
-  <span class="sr-only">Loading...</span>
-</div>
-<div class="spinner-border text-success" role="status">
-  <span class="sr-only">Loading...</span>
-</div>
-<div class="spinner-border text-danger" role="status">
-  <span class="sr-only">Loading...</span>
-</div>
-<div class="spinner-border text-warning" role="status">
-  <span class="sr-only">Loading...</span>
-</div>
-<div class="spinner-border text-info" role="status">
-  <span class="sr-only">Loading...</span>
-</div>
-<div class="spinner-border text-light" role="status">
-  <span class="sr-only">Loading...</span>
-</div>
-<div class="spinner-border text-dark" role="status">
-  <span class="sr-only">Loading...</span>
-  <span class="sr-only">Loading...</span>
-</div>
-<div class="spinner-border text-secondary" role="status">
-  <span class="sr-only">Loading...</span>
-</div>
-<div class="spinner-border text-success" role="status">
-  <span class="sr-only">Loading...</span>
-</div>
-<div class="spinner-border text-danger" role="status">
-  <span class="sr-only">Loading...</span>
-</div>
-<div class="spinner-border text-warning" role="status">
-  <span class="sr-only">Loading...</span>
-</div>
-<div class="spinner-border text-info" role="status">
-  <span class="sr-only">Loading...</span>
-</div>
-<div class="spinner-border text-light" role="status">
-  <span class="sr-only">Loading...</span>
-</div>
-<div class="spinner-border text-dark" role="status">
-  <span class="sr-only">Loading...</span>
-</div>
-<div class="puppy">
-
-            <button onclick="pushButton()"> Get puppy! </button>
-          <div><img id = "img1" src="#" alt="wymyśl sobie"></div>
-</div>
-      </main>
-      <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
-  Launch demo modal
-</button>
-<div class="container">
-<!-- Modal -->
-<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
+<body onload="pushButton()">
+  <header>
+    <div class="container-navbar">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">
+          <img src="images/logo-small.png" class="logo" alt="logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
         </button>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <h1 class="header-text">Psia adopcja</h1>
+        <form class="search">
+          <input type="text" id="szukaj"> <input type="submit" value="Szukaj" id="wyslij">
+        </form>
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-twitter-square"></i>
+        <i class="fas fa-envelope-square"></i>
+        <i class="fas fa-phone-square-alt"></i>
+    </div>
+    <div class="nav">
+    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">O nas</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Wolontariat</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Kontakt</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pills-history-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-history" aria-selected="false">Psie historie</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pills-fundation-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-fundation" aria-selected="false">Fundacja</a>
+    </li>
+  </ul>
+  <div class="tab-content" id="pills-tabContent">
+    <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore placeat molestias saepe. Quo, cumque, quaerat. Excepturi porro laudantium provident accusantium ab, enim, fuga alias sapiente, hic officia blanditiis maxime, cumque?</div>
+    <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+    <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis accusamus nobis vero aut rem ipsam consequuntur possimus consequatur, inventore ea optio, delectus adipisci, expedita numquam fugiat illo quaerat necessitatibus placeat.</div>
+    <div class="tab-pane fade" id="pills-history" role="tabpanel" aria-labelledby="pills-history-tab">Historie naszych podopiecznych</div>
+    <div class="tab-pane fade" id="pills-fundation" role="tabpanel" aria-labelledby="pills-fundation-tab">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic deleniti vel et, vero, quaerat recusandae dolorem deserunt possimus laudantium itaque ad, ratione blanditiis voluptate ut totam enim minus quia alias.</div>
+  </div>
+</div>
+  </header>
+  <main>
+    <div class="spinner-border text-primary" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+    <div class="spinner-border text-secondary" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+    <div class="spinner-border text-success" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+    <div class="spinner-border text-danger" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+    <div class="spinner-border text-warning" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+    <div class="spinner-border text-info" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+    <div class="spinner-border text-light" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+    <div class="spinner-border text-dark" role="status">
+      <span class="sr-only">Loading...</span>
+      <span class="sr-only">Loading...</span>
+    </div>
+    <div class="spinner-border text-secondary" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+    <div class="spinner-border text-success" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+    <div class="spinner-border text-danger" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+    <div class="spinner-border text-warning" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+    <div class="spinner-border text-info" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+    <div class="spinner-border text-light" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+    <div class="spinner-border text-dark" role="status">
+      <span class="sr-only">Loading...</span>
+      <span class="sr-only">Loading...</span>
+    </div>
+    <div class="spinner-border text-secondary" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+    <div class="spinner-border text-success" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+    <div class="spinner-border text-danger" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+    <div class="spinner-border text-warning" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+    <div class="spinner-border text-info" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+    <div class="spinner-border text-light" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+    <div class="spinner-border text-dark" role="status">
+      <span class="sr-only">Loading...</span>
+      <span class="sr-only">Loading...</span>
+    </div>
+    <div class="spinner-border text-secondary" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+    <div class="spinner-border text-success" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+    <div class="spinner-border text-danger" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+    <div class="spinner-border text-warning" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+    <div class="spinner-border text-info" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+    <div class="spinner-border text-light" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+    <div class="spinner-border text-dark" role="status">
+      <span class="sr-only">Loading...</span>
+      <span class="sr-only">Loading...</span>
+    </div>
+    <div class="spinner-border text-secondary" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+    <div class="spinner-border text-success" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+    <div class="spinner-border text-danger" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+    <div class="spinner-border text-warning" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+    <div class="spinner-border text-info" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+    <div class="spinner-border text-light" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+    <div class="spinner-border text-dark" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+    <div class="container-button">
+      <button class="adoption btn btn-danger" type="button" onclick="pushButton()"> Zaadoptuj mnie! </button></div>
+      <div class="puppy-container"><img id="img1" src="#" alt="pieski">
+    </div>
+  </main>
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-primary" id="policy" data-toggle="modal" data-target="#exampleModalLong">
+    Polityka prywatności
+  </button>
+  <div class="container">
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Polityka prywatności</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, eligendi dolorum illum, ipsa officia veritatis laborum libero sint delectus nemo explicabo temporibus fugiat, voluptatibus obcaecati esse architecto, omnis perspiciatis! Ipsam!
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
-<!-- Copyright -->
-<div class="footer-copyright text-center py-3">© 2019 Copyright: :)
+  <footer>
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2019 Copyright: :)
+  </div>
 
-</div>
 
+  </footer>
 
-</footer>
+  <script src="js/jquery-3.3.1.js" charset="utf-8"></script>
+  <script src="bootstrap-4.3.1-dist/js/bootstrap.min.js" charset="utf-8"></script>
+  <script type="text/javascript">
+    function pushButton() {
+      console.log("Button pushed - get puppy");
 
-  </body>
+      let xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState === 4 && this.status === 200) {
+          console.log("Dobrze" + this);
+          console.log(JSON.parse(this.responseText));
+          let puppy = JSON.parse(this.responseText);
+          console.log(puppy["message"]);
+          document.getElementById("img1").src = puppy["message"];
+        }
+      }
+      xhttp.open("GET", "https://dog.ceo/api/breeds/image/random", true);
+      xhttp.send();
+    }
+    $('#pills-home').on('click', function (e) {
+  e.preventDefault()
+  $(this).tab('show')
+})
+$('#pills-profile').on('click', function (e) {
+e.preventDefault()
+$(this).tab('show')
+})
+$('#pills-contact').on('click', function (e) {
+e.preventDefault()
+$(this).tab('show')
+})
+$('#pills-history').on('click', function (e) {
+e.preventDefault()
+$(this).tab('show')
+})
+$('#pills-fundation').on('click', function (e) {
+e.preventDefault()
+$(this).tab('show')
+})
+
+  </script>
+
+</body>
+
 </html>
