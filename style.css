@@ -59,8 +59,9 @@ body{
 }
 
 .nav-item{
-  width: 16vw;
+  width: 18vw;
   text-align: center;
+  font-size: 3vh;
 }
 #policy{
   margin-top: 8%;
