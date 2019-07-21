@@ -48,15 +48,18 @@ body{
 }
 .adoption{
   background-color: navy;
-  margin-left: 10%;
-  margin-top: 2%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 6vh;
 }
 .nav{
   background-color: white;
   font-weight: bold;
 }
-.nav-link{
-  width: 8vw;
+
+.li.nav-item{
+  width: 10vw;
 }
 #policy{
   margin-top: 8%;

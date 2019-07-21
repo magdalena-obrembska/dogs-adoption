@@ -26,10 +26,10 @@
         <form class="search">
           <input type="text" id="szukaj"> <input type="submit" value="Szukaj" id="wyslij">
         </form>
-        <i class="fab fa-facebook"></i>
-        <i class="fab fa-twitter-square"></i>
-        <i class="fas fa-envelope-square"></i>
-        <i class="fas fa-phone-square-alt"></i>
+        <i class="fab fa-facebook" id="facelogin"></i>
+        <i class="fab fa-twitter-square" id="tweetlogin"></i>
+        <i class="fas fa-envelope-square" id="maillogin"></i>
+        <i class="fas fa-phone-square-alt" id="phone"></i>
     </div>
     <div class="nav">
     <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
@@ -59,118 +59,7 @@
 </div>
   </header>
   <main>
-    <div class="spinner-border text-primary" role="status">
-      <span class="sr-only">Loading...</span>
-    </div>
-    <div class="spinner-border text-secondary" role="status">
-      <span class="sr-only">Loading...</span>
-    </div>
-    <div class="spinner-border text-success" role="status">
-      <span class="sr-only">Loading...</span>
-    </div>
-    <div class="spinner-border text-danger" role="status">
-      <span class="sr-only">Loading...</span>
-    </div>
-    <div class="spinner-border text-warning" role="status">
-      <span class="sr-only">Loading...</span>
-    </div>
-    <div class="spinner-border text-info" role="status">
-      <span class="sr-only">Loading...</span>
-    </div>
-    <div class="spinner-border text-light" role="status">
-      <span class="sr-only">Loading...</span>
-    </div>
-    <div class="spinner-border text-dark" role="status">
-      <span class="sr-only">Loading...</span>
-      <span class="sr-only">Loading...</span>
-    </div>
-    <div class="spinner-border text-secondary" role="status">
-      <span class="sr-only">Loading...</span>
-    </div>
-    <div class="spinner-border text-success" role="status">
-      <span class="sr-only">Loading...</span>
-    </div>
-    <div class="spinner-border text-danger" role="status">
-      <span class="sr-only">Loading...</span>
-    </div>
-    <div class="spinner-border text-warning" role="status">
-      <span class="sr-only">Loading...</span>
-    </div>
-    <div class="spinner-border text-info" role="status">
-      <span class="sr-only">Loading...</span>
-    </div>
-    <div class="spinner-border text-light" role="status">
-      <span class="sr-only">Loading...</span>
-    </div>
-    <div class="spinner-border text-dark" role="status">
-      <span class="sr-only">Loading...</span>
-      <span class="sr-only">Loading...</span>
-    </div>
-    <div class="spinner-border text-secondary" role="status">
-      <span class="sr-only">Loading...</span>
-    </div>
-    <div class="spinner-border text-success" role="status">
-      <span class="sr-only">Loading...</span>
-    </div>
-    <div class="spinner-border text-danger" role="status">
-      <span class="sr-only">Loading...</span>
-    </div>
-    <div class="spinner-border text-warning" role="status">
-      <span class="sr-only">Loading...</span>
-    </div>
-    <div class="spinner-border text-info" role="status">
-      <span class="sr-only">Loading...</span>
-    </div>
-    <div class="spinner-border text-light" role="status">
-      <span class="sr-only">Loading...</span>
-    </div>
-    <div class="spinner-border text-dark" role="status">
-      <span class="sr-only">Loading...</span>
-      <span class="sr-only">Loading...</span>
-    </div>
-    <div class="spinner-border text-secondary" role="status">
-      <span class="sr-only">Loading...</span>
-    </div>
-    <div class="spinner-border text-success" role="status">
-      <span class="sr-only">Loading...</span>
-    </div>
-    <div class="spinner-border text-danger" role="status">
-      <span class="sr-only">Loading...</span>
-    </div>
-    <div class="spinner-border text-warning" role="status">
-      <span class="sr-only">Loading...</span>
-    </div>
-    <div class="spinner-border text-info" role="status">
-      <span class="sr-only">Loading...</span>
-    </div>
-    <div class="spinner-border text-light" role="status">
-      <span class="sr-only">Loading...</span>
-    </div>
-    <div class="spinner-border text-dark" role="status">
-      <span class="sr-only">Loading...</span>
-      <span class="sr-only">Loading...</span>
-    </div>
-    <div class="spinner-border text-secondary" role="status">
-      <span class="sr-only">Loading...</span>
-    </div>
-    <div class="spinner-border text-success" role="status">
-      <span class="sr-only">Loading...</span>
-    </div>
-    <div class="spinner-border text-danger" role="status">
-      <span class="sr-only">Loading...</span>
-    </div>
-    <div class="spinner-border text-warning" role="status">
-      <span class="sr-only">Loading...</span>
-    </div>
-    <div class="spinner-border text-info" role="status">
-      <span class="sr-only">Loading...</span>
-    </div>
-    <div class="spinner-border text-light" role="status">
-      <span class="sr-only">Loading...</span>
-    </div>
-    <div class="spinner-border text-dark" role="status">
-      <span class="sr-only">Loading...</span>
-    </div>
+  
     <div class="container-button">
       <button class="adoption btn btn-danger" type="button" onclick="pushButton()"> Zaadoptuj mnie! </button></div>
       <div class="puppy-container"><img id="img1" src="#" alt="pieski">
@@ -195,8 +84,8 @@
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, eligendi dolorum illum, ipsa officia veritatis laborum libero sint delectus nemo explicabo temporibus fugiat, voluptatibus obcaecati esse architecto, omnis perspiciatis! Ipsam!
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Zgadzam się</button>
+            <button type="button" class="btn btn-primary">Nie zgadzam się</button>
           </div>
         </div>
       </div>
@@ -250,6 +139,24 @@ e.preventDefault()
 $(this).tab('show')
 })
 
+function logFb(){
+  alert("zaloguj do facebook")
+}
+var element = document.getElementById("facelogin");
+
+element.onclick = logFb;
+function logTweet(){
+  alert("zaloguj do twittera.")
+}
+ element = document.getElementById("tweetlogin");
+
+element.onclick = logTweet;
+function logMail(){
+  alert("zaloguj")
+}
+ element = document.getElementById("maillogin");
+
+element.onclick = logMail;
   </script>
 
 </body>
