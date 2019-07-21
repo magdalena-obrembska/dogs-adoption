@@ -1,0 +1,14 @@
+html,body{
+  margin: 0;
+  padding: 0;
+  background-color: pink;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+.logo{
+  width: 12%;
+  hight: 12%;
+}
+.fa-facebook{
+  color: white;
+  font-size: 50px;
+}
