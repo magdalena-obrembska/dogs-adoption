@@ -60,6 +60,7 @@ body{
 
 .nav-item{
   width: 16vw;
+  text-align: center;
 }
 #policy{
   margin-top: 8%;
