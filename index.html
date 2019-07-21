@@ -9,8 +9,8 @@
   <script src="jquery-3.3.1.js" charset="utf-8"></script>
   <script src="bootstrap-4.3.1-dist/js/bootstrap.min.js" charset="utf-8"></script>
   <script type="text/javascript">
-   function pushBatton() {
-     console.log("Button pushed");
+   function pushButton() {
+     console.log("Button pushed - get puppy");
 
      let xhttp = new XMLHttpRequest();
      xhttp.onreadystatechange = function() {
@@ -31,7 +31,7 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
   </head>
-    <body onload ="pushBatton()">
+    <body onload ="pushButton()">
     <header>
       <div class="container">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -215,7 +215,7 @@
 </div>
 <div class="puppy">
 
-            <button onclick="pushBatton()"> Get puppy! </button>
+            <button onclick="pushButton()"> Get puppy! </button>
           <div><img id = "img1" src="#" alt="wymyśl sobie"></div>
 </div>
       </main>
